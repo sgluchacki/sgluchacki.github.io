@@ -2630,6 +2630,7 @@ input, select, textarea {
 
 			.image.fit img {
 				width: 100%;
+				border: 1px solid rgb(220,220,220);
 			}
 
 		.image.main {
