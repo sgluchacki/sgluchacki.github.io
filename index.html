@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload">
+	<body class="is-preload" onload="wakeUpHeroku()">
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
@@ -151,6 +151,13 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				function wakeUpHeroku() {
+					fetch('https://taskdrill.herokuapp.com', {mode: 'no-cors'});
+					fetch('https://wheredis.herokuapp.com', {mode: 'no-cors'});
+					fetch('https://unstuck-code-challenges.herokuapp.com', {mode: 'no-cors'});
+				}
+			</script>
 
 	</body>
 </html>
